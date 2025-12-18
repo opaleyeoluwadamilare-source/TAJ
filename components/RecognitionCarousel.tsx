@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Award } from 'lucide-react';
 
 const recognitions = [
     {
         text: "HBCUniverse 30 Under 30",
-        detail: "Honoring excellence and impact.",
-        image: "/hbcu_real.png"
+        detail: "Honoring excellence and impact."
     },
     {
         text: "Rising Star",
-        detail: "Baltimore City Chamber of Commerce",
-        image: "/baltimore_star.png"
+        detail: "Baltimore City Chamber of Commerce"
     },
     {
         text: "Featured on God Bless Bitcoin",
-        detail: "Alongside Mark Cuban, Robert Kiyosaki, and Michael Saylor.",
-        image: "/bitcoin_feature.png"
+        detail: "Alongside Mark Cuban, Robert Kiyosaki, and Michael Saylor."
     }
 ];
 
@@ -51,71 +48,53 @@ export const RecognitionCarousel: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="relative w-full max-w-6xl mx-auto h-[500px] bg-white rounded-2xl shadow-2xl shadow-navy-100 overflow-hidden">
+                <div className="relative w-full max-w-4xl mx-auto h-[400px] bg-white rounded-2xl shadow-xl shadow-navy-100 overflow-hidden flex items-center justify-center">
                     {recognitions.map((item, index) => (
                         <div
                             key={index}
-                            className={`absolute top-0 left-0 w-full h-full flex flex-col md:flex-row transition-all duration-700 transform ${index === currentIndex
-                                ? 'opacity-100 translate-x-0'
-                                : index < currentIndex
-                                    ? 'opacity-0 -translate-x-full'
-                                    : 'opacity-0 translate-x-full'
+                            className={`absolute inset-0 flex flex-col items-center justify-center p-8 text-center transition-all duration-700 transform ${index === currentIndex
+                                ? 'opacity-100 translate-y-0 scale-100'
+                                : 'opacity-0 translate-y-8 scale-95 pointer-events-none'
                                 }`}
                         >
-                            {/* Image Section */}
-                            <div className="w-full md:w-1/2 h-64 md:h-full relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-navy-900/10 group-hover:bg-navy-900/0 transition-colors duration-500 z-10"></div>
-                                <img
-                                    src={item.image}
-                                    alt={item.text}
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                />
+                            <div className="mb-8 p-4 bg-navy-50 rounded-full text-sky-500">
+                                <Award size={48} />
                             </div>
 
-                            {/* Text Section */}
-                            <div className="w-full md:w-1/2 h-full p-8 md:p-16 flex flex-col justify-center bg-white relative">
-                                <div className="absolute top-0 right-0 p-8 opacity-5">
-                                    <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                                    </svg>
-                                </div>
-
-                                <h4 className="text-3xl md:text-4xl lg:text-5xl font-serif text-navy-900 tracking-tight leading-tight mb-6">
-                                    {item.text}
-                                </h4>
-                                <div className="w-16 h-1 bg-sky-500 mb-6"></div>
-                                <p className="text-gray-500 text-lg md:text-xl font-light tracking-wide leading-relaxed">
-                                    {item.detail}
-                                </p>
-                            </div>
+                            <h4 className="text-3xl md:text-5xl font-serif text-navy-900 tracking-tight leading-tight mb-6">
+                                {item.text}
+                            </h4>
+                            <div className="w-16 h-1 bg-sky-500 mb-6 mx-auto"></div>
+                            <p className="text-gray-500 text-lg md:text-xl font-light tracking-wide leading-relaxed max-w-2xl">
+                                {item.detail}
+                            </p>
                         </div>
                     ))}
 
                     {/* Navigation Controls */}
-                    <div className="absolute bottom-8 right-8 flex gap-4 z-20">
-                        <button
-                            onClick={prevSlide}
-                            className="p-4 bg-white hover:bg-navy-900 hover:text-white text-navy-900 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl border border-gray-100"
-                            aria-label="Previous slide"
-                        >
-                            <ChevronLeft size={24} />
-                        </button>
-                        <button
-                            onClick={nextSlide}
-                            className="p-4 bg-white hover:bg-navy-900 hover:text-white text-navy-900 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl border border-gray-100"
-                            aria-label="Next slide"
-                        >
-                            <ChevronRight size={24} />
-                        </button>
-                    </div>
+                    <button
+                        onClick={prevSlide}
+                        className="absolute left-4 md:left-8 p-3 text-gray-400 hover:text-navy-900 transition-colors border border-gray-100 hover:border-sky-200 rounded-full z-20 bg-white shadow-sm"
+                        aria-label="Previous slide"
+                    >
+                        <ChevronLeft size={24} />
+                    </button>
+
+                    <button
+                        onClick={nextSlide}
+                        className="absolute right-4 md:right-8 p-3 text-gray-400 hover:text-navy-900 transition-colors border border-gray-100 hover:border-sky-200 rounded-full z-20 bg-white shadow-sm"
+                        aria-label="Next slide"
+                    >
+                        <ChevronRight size={24} />
+                    </button>
 
                     {/* Indicators */}
-                    <div className="absolute bottom-8 left-8 flex gap-2 z-20">
+                    <div className="absolute bottom-6 flex gap-2 z-20">
                         {recognitions.map((_, index) => (
                             <button
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
-                                className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex ? 'w-12 bg-sky-500' : 'w-4 bg-gray-300 hover:bg-sky-300'
+                                className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex ? 'w-8 bg-sky-500' : 'w-2 bg-gray-300 hover:bg-sky-300'
                                     }`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
