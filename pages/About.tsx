@@ -47,6 +47,29 @@ export const About: React.FC = () => {
                 </div>
             </section>
 
+            {/* Innovation & Ecosystem (MorganHacks) */}
+            <section className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-12">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-start">
+                    <div className="md:col-span-4 sticky top-32">
+                        <h2 className="text-3xl font-bold text-navy-900 mb-6 flex items-center gap-4">
+                            <span className="w-12 h-[1px] bg-sky-500"></span>
+                            Innovation & Ecosystem
+                        </h2>
+                    </div>
+                    <div className="md:col-span-8">
+                        <div className="group hover:-translate-y-1 transition-transform duration-500">
+                            <h3 className="text-2xl font-serif text-navy-900 mb-4">MorganHacks</h3>
+                            <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mb-6">
+                                He is the Founder of <strong className="text-navy-900">MorganHacks</strong>, one of the fastest-growing university-led tech movements in the HBCU ecosystem. Since 2023, MorganHacks has reached over 1,000 students from dozens of institutions and was recognized by Vice President Kamala Harris as a platform advancing innovation.
+                            </p>
+                            <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
+                                It now serves as a national launchpad for creativity and real-world problem-solving, equipping students through immersive workshops, mentorship, community challenges, and hands-on exploration in AI, robotics, cybersecurity, sustainability, and emerging technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Ministry & Impact */}
             <section className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-start">
@@ -57,8 +80,25 @@ export const About: React.FC = () => {
                         </h2>
                     </div>
                     <div className="md:col-span-8">
-                        <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
-                            He is the Founder of <strong className="text-navy-900">The Davidic Tribe</strong> and <strong className="text-navy-900">10 Hours Houston</strong>, a prayer movement contending for the souls of the younger generation and establishing them in God’s purposes—so they can influence systems, steward authority, and shape culture with boldness and clarity.
+                        <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
+                            He is also the Founder of <strong className="text-navy-900">The Davidic Tribe</strong> and <strong className="text-navy-900">10 Hours Houston</strong>, prayer movements contending for the souls of the younger generation and establishing them in God’s purposes — so they can influence systems, steward authority, and shape culture with boldness and clarity.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Recognition */}
+            <section className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-12 pb-24">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-start">
+                    <div className="md:col-span-4 sticky top-32">
+                        <h2 className="text-3xl font-bold text-navy-900 mb-6 flex items-center gap-4">
+                            <span className="w-12 h-[1px] bg-sky-500 mr-2"></span>
+                            Recognition
+                        </h2>
+                    </div>
+                    <div className="md:col-span-8">
+                        <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
+                            Temitope’s leadership has earned honors such as <strong className="text-navy-900">HBCUniverse 30 Under 30</strong> and recognition as a <strong className="text-navy-900">Rising Star</strong> by the Baltimore City Chamber of Commerce. He has been featured on platforms like <strong className="text-navy-900">God Bless Bitcoin</strong>, appearing alongside leaders such as Mark Cuban, Robert Kiyosaki, Robert F. Kennedy Jr., and Michael Saylor, shaping conversations about the future of money and the spiritual patterns guiding emerging global systems.
                         </p>
                     </div>
                 </div>
