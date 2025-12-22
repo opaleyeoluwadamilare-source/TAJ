@@ -7,17 +7,17 @@ export const About: React.FC = () => {
 
     return (
         <div className="py-24 space-y-32 animate-fade-in-up relative">
-            {/* Sticky Side Label for Desktop */}
-            <div className="hidden md:block fixed left-4 lg:left-12 top-1/2 -translate-y-1/2 z-10">
-                <h2 className="text-sm font-bold uppercase tracking-widest text-navy-900 -rotate-90 origin-center whitespace-nowrap flex items-center gap-4">
-                    About
+            {/* Top Label */}
+            <div className="hidden md:block absolute top-8 left-0">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-navy-900 flex items-center gap-4">
                     <span className="w-8 h-[1px] bg-sky-500"></span>
+                    About
                 </h2>
             </div>
 
             {/* Main About Section */}
             <section className="max-w-4xl mx-auto px-6 text-center">
-                <h1 className="text-5xl md:text-7xl font-bold text-navy-900 mb-12 tracking-tight">About</h1>
+
                 <div className="space-y-8 text-xl md:text-2xl font-light text-gray-600 leading-relaxed">
                     <p>
                         <strong className="text-navy-900 font-semibold">Temitope Ezekiel Ajibola</strong> is a generational architect shaping a future where divine intelligence informs human innovation and experience, enabling the rise of people, systems, and nations that endure.

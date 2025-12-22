@@ -8,7 +8,7 @@ export const Contact: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {/* Contact Form */}
                 <div className="bg-gray-50 p-8 rounded-lg">
-                    <h3 className="text-xl font-bold text-navy-900 mb-6">Send a Message</h3>
+                    <h3 className="text-2xl font-serif text-navy-900 mb-6">Send a Message</h3>
                     <form className="space-y-4">
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
