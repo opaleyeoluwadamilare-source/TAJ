@@ -14,14 +14,18 @@ export const Hero: React.FC = () => {
           Enabling the rise of people, systems, and nations that endure.
         </p>
       </div>
-      
+
       <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm uppercase tracking-wider text-gray-400 font-medium">
+        <span>Generational Architect</span>
+        <span className="text-sky-500">|</span>
         <span>Leader</span>
-        <span className="text-sky-500">•</span>
+        <span className="text-sky-500">|</span>
         <span>Builder</span>
-        <span className="text-sky-500">•</span>
+        <span className="text-sky-500">|</span>
         <span>Inventor</span>
+        <span className="text-sky-500">|</span>
+        <span>Author</span>
       </div>
-    </section>
+    </section >
   );
 };

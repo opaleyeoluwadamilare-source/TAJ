@@ -10,7 +10,7 @@ export const Book: React.FC = () => {
             <div className="md:absolute top-8 left-0 hidden md:block">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-navy-900 flex items-center gap-4">
                     <span className="w-8 h-[1px] bg-sky-500"></span>
-                    Book
+                    Books
                 </h2>
             </div>
 

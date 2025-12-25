@@ -31,7 +31,7 @@ export const About: React.FC = () => {
             {/* Research & Industry */}
             <section className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-start">
-                    <div className="md:col-span-4 sticky top-32">
+                    <div className="md:col-span-4 md:sticky top-32">
                         <h2 className="text-3xl font-bold text-navy-900 mb-6 flex items-center gap-4">
                             <span className="w-12 h-[1px] bg-sky-500"></span>
                             RESEARCH & INDUSTRY
@@ -58,7 +58,7 @@ export const About: React.FC = () => {
             {/* Innovation & Ecosystem */}
             <section className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-start">
-                    <div className="md:col-span-4 sticky top-32">
+                    <div className="md:col-span-4 md:sticky top-32">
                         <h2 className="text-3xl font-bold text-navy-900 mb-6 flex items-center gap-4">
                             <span className="w-12 h-[1px] bg-sky-500"></span>
                             INNOVATION & ECOSYSTEM
@@ -81,7 +81,7 @@ export const About: React.FC = () => {
             {/* Ministry & Impact */}
             <section className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-start">
-                    <div className="md:col-span-4 sticky top-32">
+                    <div className="md:col-span-4 md:sticky top-32">
                         <h2 className="text-3xl font-bold text-navy-900 mb-6 flex items-center gap-4">
                             <span className="w-12 h-[1px] bg-sky-500 mr-2"></span>
                             MINISTRY & IMPACT
@@ -101,7 +101,7 @@ export const About: React.FC = () => {
             {/* Recognition & Influence */}
             <section className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-12 pb-24">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-start">
-                    <div className="md:col-span-4 sticky top-32">
+                    <div className="md:col-span-4 md:sticky top-32">
                         <h2 className="text-3xl font-bold text-navy-900 mb-6 flex items-center gap-4">
                             <span className="w-12 h-[1px] bg-sky-500 mr-2"></span>
                             RECOGNITION & INFLUENCE

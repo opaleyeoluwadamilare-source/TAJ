@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Linkedin, Twitter, Instagram, GraduationCap, Mail } from 'lucide-react';
 import { Navigation } from './components/Navigation';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
@@ -29,9 +30,29 @@ const App: React.FC = () => {
             </Routes>
           </div>
 
-          <footer className="mt-24 py-8 px-4 md:px-8 lg:px-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 w-full max-w-[1920px] mx-auto">
-            <p>&copy; {new Date().getFullYear()} Temitope Ezekiel Ajibola.</p>
-            <p className="mt-2 md:mt-0">Generational Architect.</p>
+          <footer className="mt-24 py-8 px-4 md:px-8 lg:px-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 w-full max-w-[1920px] mx-auto gap-4">
+            <div className="flex gap-4">
+              <a href="https://www.linkedin.com/in/temitope-ajibola" target="_blank" rel="noopener noreferrer" className="hover:text-sky-500 transition-colors">
+                <Linkedin size={20} />
+              </a>
+              <a href="https://x.com/TEAJIBOLA" target="_blank" rel="noopener noreferrer" className="hover:text-sky-500 transition-colors">
+                <Twitter size={20} />
+              </a>
+              <a href="https://www.instagram.com/teajibola/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-500 transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href="https://scholar.google.com/citations?user=3IR2-BcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-sky-500 transition-colors">
+                <GraduationCap size={20} />
+              </a>
+              <a href="mailto:temitopeajibola7@yahoo.com" className="hover:text-sky-500 transition-colors">
+                <Mail size={20} />
+              </a>
+            </div>
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+              <p>&copy; {new Date().getFullYear()} Temitope Ezekiel Ajibola.</p>
+              <p className="hidden md:block text-gray-300">•</p>
+              <p>Generational Architect.</p>
+            </div>
           </footer>
 
         </main>
